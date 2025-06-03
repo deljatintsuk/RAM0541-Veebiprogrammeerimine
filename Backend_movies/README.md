@@ -25,7 +25,7 @@ SERVER_PORT=8080
 5. Launch backend (`npx nodemon index.js`)
 6. Use Swagger UI for checking available API (`127.0.0.1:8080/api-docs/`)
 7. Swagger autogenerates API documentation every launch
-```
+
 Authorisation
 
 username: admin
@@ -33,7 +33,6 @@ password: 123456
 
 After login then comes token. Using this token must be with Bearer as a title for example ![image](https://github.com/user-attachments/assets/c32441fa-4ce2-4a71-8708-4bcda07c0552)
 
-```
 
 ![image](https://github.com/user-attachments/assets/56124702-2c83-493c-8d75-25b48d937f08)
 
