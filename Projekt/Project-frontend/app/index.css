@@ -1,0 +1,29 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+/* Üldine taust ja fondid */
+body {
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Lehe peamise konteineri stiil */
+.page-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-top: 2rem;
+  border: 1px solid #e9ecef;
+}
+
+/* Raamatukaardi stiilide täiustamine */
+.book-card {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
