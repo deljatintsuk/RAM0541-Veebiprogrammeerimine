@@ -1,34 +1,26 @@
-# RAM0541 Practice - Project - Digital Goods Platform
-By Aleksandr Bondarev
+# RAM0541 Practice - Project
+Aleksander Deljatintšuk
 
 ## Description
-The copy of platform of selling digital goods inspired by G2A, plati.ru and okidoki.ee 
+This project is a full-stack web application for a library lending system, built using a modern technology stack. The application allows users to register, log in, browse, and search for works, borrow available editions, return loans, and reserve items that are currently checked out.
+
+Administrators have access to a dedicated dashboard where they can manage users and their roles, and get a complete overview of all loans and reservations within the system.
+
+Core Functionality:
+
+* User Authentication (JWT): Secure registration and login with JWT-based authentication. Users have roles (Reader, Admin) that restrict access to certain functionalities.
+* Dynamic Book Search: Users can browse all items and use a dynamic search to find books by title, author, or category.
+* Lending and Returning Logic: Logged-in users can borrow available items and return their own loans.
+* Two-step Reservation System: If an item is checked out, a user can reserve it. When the item becomes available, the first user in the reservation queue is notified and has a limited time to confirm the loan.
+* Personalized User Views: Each user has personal "My Loans" and "My Reservations" pages.
+* Administrator Dashboard: Users with the 'Admin' role have access to a dashboard to:
+    * View a list of all system users and manage their roles.
+    * Oversee all loans and reservations.
+    * Monitor overdue loans.
 
 ## Usage
 
-1. Clone the repository.
-2. Install dependencies (`npm install`).
-3. Use [SQL backup](https://github.com/Hirolane/ram0541_practice/blob/main/Projekt/setup/Schema%20Backup.sql) for schema recreating on your db
-4. Configure your .env file in root folder Projekt
-   Use following template:
-```
-#DATABASE
-DB_DATABASE=db_name
-DB_USER=user123
-DB_PASSWORD=qwerty
+### Database Setup
+In your PostgreSQL server, create a new, empty database (e.g., libraryapp_db).
+Execute the contents of the database_setup.sql file on this database to create all the necessary tables, views, and rules.
 
-DB_HOST=host.name.com
-DB_PORT=5432
-
-DB_SCHEMA=okidoki
-DB_DIALECT=postgres
-
-#SERVER_PORT
-SERVER_PORT=3000
-
-#TOKEN
-TOKEN_SECRET='token_abc'
-# Generate random token by using token generator site like https://it-tools.tech/token-generator
-```
-6. Launch the server (`npx nodemon index.js`)
-7. Open `http://localhost:port/api-docs/`
